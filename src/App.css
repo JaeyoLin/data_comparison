@@ -20,3 +20,42 @@
 .App-link {
   color: #09d3ac;
 }
+
+.container {
+  display: flex;
+  width: 1000px;
+  height: 600px;
+  background-color: #ECEFF1;
+}
+
+.record-list {
+  flex: 1;
+  height: 600px;
+}
+
+.record-title {
+  font-size: 30px;
+  color: #212121;
+  height: 50px;
+}
+
+.divider {
+  width: 150px;
+  border: 1px solid #B0BEC5;
+  margin: 0 auto;
+}
+
+.list {
+  height: 490px;
+  overflow-y: auto;
+  color: #424242;
+}
+
+input {
+  height: 20px;
+}
+
+ul {
+  text-align: left;
+  font-size: 18px;
+}
