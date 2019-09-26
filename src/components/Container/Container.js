@@ -106,21 +106,25 @@ const Container = () => {
         title="A"
         list={arrayA}
         onEnter={handleEnter}
+        tabindex="1"
       />
       <Record
         title="B"
         list={arrayB}
         onEnter={handleEnter}
+        tabindex="2"
       />
       <Record
         title="C"
         list={arrayC}
         onEnter={handleEnter}
+        tabindex="3"
       />
       <Record
         title="D"
         list={arrayD}
         onEnter={handleEnter}
+        tabindex="4"
       />
       <Result
         list={arrayResult}

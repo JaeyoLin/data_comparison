@@ -9,6 +9,7 @@ const Record = (props) => {
     title,
     list,
     onEnter,
+    tabindex
   } = props;
 
   /**
@@ -44,7 +45,7 @@ const Record = (props) => {
           }
         </ul>
       </div>
-      <input value={value} onChange={handleChange} onKeyDown={handleKeyDown} />
+      <input value={value} onChange={handleChange} onKeyDown={handleKeyDown} tabindex={tabindex} />
     </div>
   );
 };
