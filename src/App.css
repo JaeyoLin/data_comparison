@@ -23,7 +23,7 @@
 
 .container {
   display: flex;
-  width: 1000px;
+  width: 1150px;
   height: 600px;
   background-color: #ECEFF1;
 }
@@ -53,6 +53,7 @@
 
 input {
   height: 20px;
+  width: 80%;
 }
 
 ul {
