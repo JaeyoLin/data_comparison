@@ -3,10 +3,10 @@ import React from 'react';
 const Result = (props) => {
   const { list } = props;
   return (
-    <div className="record-list">
-      <div className="record-title">Result</div>
-      <div className="divider" />
-      <div className="list">
+    <div className="record-list result">
+      <div className="record-title red">Result</div>
+      <div className="divider width_250" />
+      <div className="list red bold">
         <ul>
           {
             list.map((tmp, index) => {
