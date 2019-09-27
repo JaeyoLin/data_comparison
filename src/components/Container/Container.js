@@ -98,7 +98,51 @@ const Container = () => {
         break;
       default:
     }
-  }
+  };
+
+  /**
+   * handleRemove
+   * 
+   * @param {*} group 
+   * @param {*} index 
+   */
+  const handleRemove = (group, index) => {
+    let array = null;
+    let arrayFunc = null;
+
+    switch (group) {
+      case 'A':
+        array = arrayA;
+        arrayFunc = setArrayA;
+        break;
+      case 'B':
+        array = arrayB;
+        arrayFunc = setArrayB;
+        break;
+      case 'C':
+        array = arrayC;
+        arrayFunc = setArrayC;
+        break;
+      case 'D':
+        array = arrayD;
+        arrayFunc = setArrayD;
+        break;
+      default:
+    }
+
+    let tmpArray = array.filter(tmp => tmp.index !== index);
+    // console.log('tmpArray', tmpArray);
+
+    // 重新排序
+    tmpArray.forEach((tmp, index) => {
+      tmpArray[index] = {
+        ...tmpArray[index],
+        index: index + 1,
+      }
+    });
+
+    arrayFunc(tmpArray);
+  };
 
   return (
     <div className="container">
@@ -106,25 +150,25 @@ const Container = () => {
         title="A"
         list={arrayA}
         onEnter={handleEnter}
-        tabindex="1"
+        onRemove={handleRemove}
       />
       <Record
         title="B"
         list={arrayB}
         onEnter={handleEnter}
-        tabindex="2"
+        onRemove={handleRemove}
       />
       <Record
         title="C"
         list={arrayC}
         onEnter={handleEnter}
-        tabindex="3"
+        onRemove={handleRemove}
       />
       <Record
         title="D"
         list={arrayD}
         onEnter={handleEnter}
-        tabindex="4"
+        onRemove={handleRemove}
       />
       <Result
         list={arrayResult}

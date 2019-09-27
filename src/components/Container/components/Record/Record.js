@@ -9,7 +9,7 @@ const Record = (props) => {
     title,
     list,
     onEnter,
-    tabindex
+    onRemove,
   } = props;
 
   /**
@@ -41,11 +41,24 @@ const Record = (props) => {
       <div className="list">
         <ul>
           {
-            list.map((tmp, index) => <li key={`${title}_record_${index}`}>{`${tmp.index} - ${tmp.value}`}</li>)
+            list.map((tmp, index) => (
+              <li key={`${title}_record_${index}`}>
+                <div className="li-container">
+                  <div className="li-content">
+                    {
+                      `${tmp.index} - ${tmp.value}`
+                    }
+                  </div>
+                  <div className="li-content li-button">
+                    <button onClick={() => {onRemove(title, tmp.index)}} >X</button>
+                  </div>
+                </div>
+              </li>
+            ))
           }
         </ul>
       </div>
-      <input value={value} onChange={handleChange} onKeyDown={handleKeyDown} tabindex={tabindex} />
+      <input value={value} onChange={handleChange} onKeyDown={handleKeyDown} />
     </div>
   );
 };
