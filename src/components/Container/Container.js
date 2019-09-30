@@ -2,7 +2,6 @@ import React, {
   useState,
   useEffect,
 } from 'react';
-import { useBeforeunload } from 'react-beforeunload';
 
 import Record from './components/Record/Record';
 import Result from './components/Result/Result';
@@ -14,12 +13,6 @@ const Container = () => {
   const [arrayD, setArrayD] = useState([]); // 群組 D
 
   const [arrayResult, setArrayResult] = useState([]); // 比對結果
-
-  // useEffect(() => {
-  //   useBeforeunload(() => "You'll lose your data!");
-  // });
-  useBeforeunload(() => "You'll lose your data!");
-
 
   /**
    * handleEnter
