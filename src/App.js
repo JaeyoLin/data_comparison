@@ -1,10 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useBeforeunload } from 'react-beforeunload';
+
+// import logo from './logo.svg';
 import './App.css';
 
 import Container from './components/Container/Container';
 
 function App() {
+  // Working
+  useBeforeunload(() => 'You wont see me');
+
   return (
     <div className="App">
       <header className="App-header">
